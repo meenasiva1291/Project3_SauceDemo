@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-30T13:26:36.354127" rpa="false" schemaversion="5">
+<suite id="s1" name="Loginpage Test" source="C:\Users\HP\RobotFrameWork\Task20_RobotFrameworkE2E\Tests\loginpage_test.robot">
+<test id="s1-t1" name="Validate the Invalid Login Error Message" line="29">
+<kw name="Open Webpage URL" owner="generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:36.981536" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser}</arg>
+<arg>C:\webdriver_manager</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-11-30T13:26:36.981253" elapsed="9.178893"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-30T13:26:46.160761" elapsed="0.432284"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:46.594486" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-30T13:26:46.593851" elapsed="1.333334"/>
+</kw>
+<arg>${browser_name}</arg>
+<arg>${webpage_url}</arg>
+<status status="PASS" start="2025-11-30T13:26:36.980171" elapsed="10.947435"/>
+</kw>
+<kw name="Enter User Credentials And Login" owner="loginpage">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:48.207824" level="INFO">Current page contains text 'Swag Labs'.</msg>
+<arg>${logo_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-30T13:26:48.019029" elapsed="0.189130"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:48.210079" level="INFO">Typing text 'invalid_user' into text field 'css:#user-name'.</msg>
+<arg>${email_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:26:48.208728" elapsed="0.205271"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:48.415598" level="INFO">Typing password into text field 'css:#password'.</msg>
+<msg time="2025-11-30T13:26:48.440403" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:26:48.414587" elapsed="0.081978"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:48.498004" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:26:48.497207" elapsed="0.271104"/>
+</kw>
+<arg>${invalid_username}</arg>
+<arg>${invalid_password}</arg>
+<status status="PASS" start="2025-11-30T13:26:48.017650" elapsed="0.751004"/>
+</kw>
+<kw name="Verify Notification Message" owner="generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T13:26:48.772712" elapsed="0.076411"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:48.896623" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>${notification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-30T13:26:48.849716" elapsed="0.047171"/>
+</kw>
+<arg>${login_error_element}</arg>
+<arg>${invalid_login_error_message}</arg>
+<status status="PASS" start="2025-11-30T13:26:48.771275" elapsed="0.125916"/>
+</kw>
+<kw name="Close The Browser" owner="generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-30T13:26:48.910467" elapsed="4.268919"/>
+</kw>
+<status status="PASS" start="2025-11-30T13:26:48.909367" elapsed="4.270377"/>
+</kw>
+<tag>ERRORMESSAGES</tag>
+<status status="PASS" start="2025-11-30T13:26:36.979166" elapsed="16.201036"/>
+</test>
+<test id="s1-t2" name="Validate the Blank Username Login Error Message" line="35">
+<kw name="Open Webpage URL" owner="generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:26:53.187142" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser}</arg>
+<arg>C:\webdriver_manager</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-11-30T13:26:53.186494" elapsed="9.118276"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-30T13:27:02.305131" elapsed="0.316895"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:02.623143" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-30T13:27:02.622654" elapsed="1.089502"/>
+</kw>
+<arg>${browser_name}</arg>
+<arg>${webpage_url}</arg>
+<status status="PASS" start="2025-11-30T13:26:53.183455" elapsed="10.529061"/>
+</kw>
+<kw name="Enter User Credentials And Login" owner="loginpage">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:03.795899" level="INFO">Current page contains text 'Swag Labs'.</msg>
+<arg>${logo_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-30T13:27:03.715565" elapsed="0.080657"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:03.797579" level="INFO">Typing text '' into text field 'css:#user-name'.</msg>
+<arg>${email_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:27:03.796723" elapsed="0.265481"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:04.063439" level="INFO">Typing password into text field 'css:#password'.</msg>
+<msg time="2025-11-30T13:27:04.089444" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:27:04.062705" elapsed="0.183406"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:04.247669" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:27:04.246695" elapsed="0.184007"/>
+</kw>
+<arg>${blank_field}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2025-11-30T13:27:03.714312" elapsed="0.716722"/>
+</kw>
+<kw name="Verify Notification Message" owner="generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T13:27:04.433444" elapsed="0.084980"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:04.617684" level="INFO">Current page contains text 'Epic sadface: Username is required'.</msg>
+<arg>${notification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-30T13:27:04.519025" elapsed="0.098896"/>
+</kw>
+<arg>${login_error_element}</arg>
+<arg>${blank_user_error_message}</arg>
+<status status="PASS" start="2025-11-30T13:27:04.432186" elapsed="0.186033"/>
+</kw>
+<kw name="Close The Browser" owner="generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-30T13:27:04.637675" elapsed="4.767430"/>
+</kw>
+<status status="PASS" start="2025-11-30T13:27:04.635795" elapsed="4.769568"/>
+</kw>
+<tag>ERRORMESSAGES</tag>
+<status status="PASS" start="2025-11-30T13:26:53.181848" elapsed="16.223864"/>
+</test>
+<test id="s1-t3" name="Validate the Blank Password Login Error Message" line="41">
+<kw name="Open Webpage URL" owner="generic" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:09.409057" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser}</arg>
+<arg>C:\webdriver_manager</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-11-30T13:27:09.408693" elapsed="8.162086"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-30T13:27:17.571138" elapsed="0.474874"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:18.047067" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-30T13:27:18.046515" elapsed="1.166807"/>
+</kw>
+<arg>${browser_name}</arg>
+<arg>${webpage_url}</arg>
+<status status="PASS" start="2025-11-30T13:27:09.407958" elapsed="9.805723"/>
+</kw>
+<kw name="Enter User Credentials And Login" owner="loginpage">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:19.290950" level="INFO">Current page contains text 'Swag Labs'.</msg>
+<arg>${logo_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-30T13:27:19.216581" elapsed="0.074649"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:19.292766" level="INFO">Typing text 'standard_user' into text field 'css:#user-name'.</msg>
+<arg>${email_input}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:27:19.291862" elapsed="0.470700"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:19.763891" level="INFO">Typing password into text field 'css:#password'.</msg>
+<msg time="2025-11-30T13:27:19.958970" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_input}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:27:19.763065" elapsed="0.224184"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:19.988666" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-30T13:27:19.987876" elapsed="0.204150"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${blank_field}</arg>
+<status status="PASS" start="2025-11-30T13:27:19.214838" elapsed="0.977545"/>
+</kw>
+<kw name="Verify Notification Message" owner="generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-30T13:27:20.198542" elapsed="0.083437"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-30T13:27:20.296520" level="INFO">Current page contains text 'Epic sadface: Password is required'.</msg>
+<arg>${notification_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-11-30T13:27:20.282550" elapsed="0.014216"/>
+</kw>
+<arg>${login_error_element}</arg>
+<arg>${blank_password_error_message}</arg>
+<status status="PASS" start="2025-11-30T13:27:20.197026" elapsed="0.100036"/>
+</kw>
+<kw name="Close The Browser" owner="generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-30T13:27:20.299070" elapsed="4.947714"/>
+</kw>
+<status status="PASS" start="2025-11-30T13:27:20.298099" elapsed="4.948906"/>
+</kw>
+<tag>ERRORMESSAGES</tag>
+<status status="PASS" start="2025-11-30T13:27:09.406973" elapsed="15.840420"/>
+</test>
+<doc>Test cases for the login page of the SauceDemo website.</doc>
+<status status="PASS" start="2025-11-30T13:26:36.357768" elapsed="48.891287"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">ERRORMESSAGES</stat>
+</tag>
+<suite>
+<stat name="Loginpage Test" id="s1" pass="3" fail="0" skip="0">Loginpage Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-30T13:26:36.976152" level="ERROR">Error in file 'C:\Users\HP\RobotFrameWork\Task20_RobotFrameworkE2E\PageObject\KeywordDefinitionFiles\loginpage.robot' on line 12: Variable file '..\Resources\Locators\test_locators.py' does not exist.</msg>
+<msg time="2025-11-30T13:26:36.976896" level="ERROR">Error in file 'C:\Users\HP\RobotFrameWork\Task20_RobotFrameworkE2E\PageObject\KeywordDefinitionFiles\loginpage.robot' on line 13: Variable file '..\Resources\TestData\test_data.py' does not exist.</msg>
+<msg time="2025-11-30T13:26:36.977679" level="ERROR">Error in file 'C:\Users\HP\RobotFrameWork\Task20_RobotFrameworkE2E\PageObject\KeywordDefinitionFiles\loginpage.robot' on line 17: Resource file 'C:UsersHPRobotFrameWorkTask20_RobotFrameworkE2EResourcesPageObjectKeywordDefinitionFilesgeneric.robot' does not exist.</msg>
+</errors>
+</robot>
