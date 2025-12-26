@@ -50,10 +50,15 @@ Total price verification
 **Key Features**
 
 ✔ Page Object Model (POM)
+
 ✔ Reusable custom keywords
+
 ✔ Random item selection logic
+
 ✔ Name & price comparison between inventory and cart
+
 ✔ Clean reporting (log.html & report.html)
+
 ✔ Regression & smoke test tagging
 
 ▶️ **How to Run the Tests**
