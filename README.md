@@ -1,5 +1,23 @@
 Project3_SauceDemo – Robot Framework Automation
 
+**Table of Contents**
+
+1. Project Overview
+
+2. Tech Stack
+
+3. Project Structure
+
+4. Test Scenarios Covered
+
+5. Key Features
+
+6. How to Run the Tests
+
+7. Test Reports
+
+8. Configuration
+
 **Project Overview**
 
 This project is an end-to-end test automation framework built using Robot Framework and SeleniumLibrary to automate the SauceDemo web application.
