@@ -1,22 +1,22 @@
 Project3_SauceDemo – Robot Framework Automation
 
-**Table of Contents**
+## Table of Contents
 
-## Project Overview
+# Project Overview
 
-## Tech Stack
+Tech Stack
 
-## Project Structure
+Project Structure
 
-## Test Scenarios Covered
+Test Scenarios Covered
 
-## Key Features
+Key Features
 
-## How to Run the Tests
+How to Run the Tests
 
-## Test Reports
+Test Reports
 
-## Configuration
+Configuration
 
 **Project Overview**
 
