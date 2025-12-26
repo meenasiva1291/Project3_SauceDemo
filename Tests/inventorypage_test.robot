@@ -52,6 +52,23 @@ Validate Sort Operations
     Select Sort Option    3
     Check The Products Order High To Low
 
+# Test case randomly select items
+Validate items added randomly
+    [Tags]    SMOKE
+    # Login to the webpage
+    Login Into The Webpage
+    # fetch items name with prices
+    Get Random 4 Items With Prices
+
+Validate items added randomly and verify cart
+    [Tags]    SMOKE
+
+    Login Into The Webpage
+    Add Random 4 Items To Cart
+    # Verify cart badge count
+    Element Text Should Be    ${cart_badge}    4
+
+
 # Test case to validate successful logout
 Validate Successful Logout
     [Tags]    SMOKE

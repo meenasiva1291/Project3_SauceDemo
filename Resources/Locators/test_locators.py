@@ -18,6 +18,8 @@ reset_button = "css:a#reset_sidebar_link"
 products_sort_locator = "css:select.product_sort_container"
 footer_widgets = "xpath://ul[@class='social']/li"
 footer_element = "css:div.footer_copy"
+add_buttons_locator = "css:button.btn_inventory"
+
 
 #CartPage Locators
 itemList_locator = "css:div.inventory_item_name"

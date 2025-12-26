@@ -15,7 +15,8 @@ Variables    ../../Resources/TestData/test_data.py
 
 #keyword to validate cart icon
 Cart icon visibility
-    Element Should Be Visible    ${cart_badge}
+    Wait Until Element Is Visible    ${cart_button}
+    Capture Page Screenshot
 
 # Keyword to log out of the webpage
 Logout of the Webpage
@@ -60,6 +61,99 @@ Collect List Of Elements
         Append To List    ${list}    ${text}
     END
     RETURN    ${list}
+
+ # Keyword to collect a list of elements
+Collect price List Of Elements
+    @{elements} =    Get Webelements    ${itemPrice_locator}
+    ${list} =    Create List
+    FOR    ${element}    IN    @{elements}
+        ${text} =    Get Text    ${element}
+        Log    ${text}    # Log the value to verify it's correctly fetched and converted
+        Append To List    ${list}    ${text}
+    END
+    Log To Console    Final list = ${list}
+    RETURN    ${list}
+
+*** Keywords ***
+#Get Item Names With Prices
+#    @{names}=     Get WebElements    ${itemList_locator}
+#    @{prices}=    Get WebElements    ${itemPrice_locator}
+#
+#    ${items}=     Create List
+#    ${count}=     Get Length    ${names}
+#
+#    FOR    ${index}    IN RANGE    ${count}
+#        ${name}=     Get Text    ${names}[${index}]
+#        ${price}=    Get Text    ${prices}[${index}]
+#        ${item}=     Catenate    SEPARATOR= :    ${name}    ${price}
+#        Append To List    ${items}    ${item}
+#        Log To Console    ${item}
+#    END
+#
+#    RETURN    ${items}
+
+
+
+*** Keywords ***
+Get Random 4 Items With Prices
+    @{name_elements}=     Get WebElements    css:div.inventory_item_name
+    @{price_elements}=    Get WebElements    css:div.inventory_item_price
+
+    ${count}=    Get Length    ${name_elements}
+    Should Be True    ${count} >= 4    Not enough items to select random 4
+
+    # Generate random indexes
+    ${indexes}=    Evaluate    random.sample(range($count), 4)    random
+
+    ${items}=    Create List
+
+    FOR    ${i}    IN    @{indexes}
+        ${name}=     Get Text    ${name_elements}[${i}]
+        ${price}=    Get Text    ${price_elements}[${i}]
+        ${item}=     Catenate    SEPARATOR= :    ${name}    ${price}
+        Append To List    ${items}    ${item}
+        Log To Console    ${item}
+    END
+
+    RETURN    ${items}
+
+*** Keywords ***
+Add Random 4 Items To Cart
+    @{add_buttons}=    Get WebElements    css:button.btn_inventory
+    ${count}=          Get Length    ${add_buttons}
+
+    Should Be True    ${count} >= 4    Not enough items to add
+
+    ${indexes}=    Evaluate    random.sample(range($count), 4)    random
+
+    FOR    ${i}    IN    @{indexes}
+        Click Element    ${add_buttons}[${i}]
+        Log To Console    Added item at index ${i}
+    END
+
+    RETURN
+
+ Add Random 4 Items And Capture Details
+    @{names}=         Get WebElements    ${itemList_locator}
+    @{prices}=        Get WebElements    ${itemPrice_locator}
+    @{add_buttons}=   Get WebElements    css:button.btn_inventory
+
+    ${count}=    Get Length    ${add_buttons}
+    Should Be True    ${count} >= 4    Not enough items to add
+
+    ${indexes}=    Evaluate    random.sample(range($count), 4)    random
+    ${items}=      Create List
+
+    FOR    ${i}    IN    @{indexes}
+        ${name}=     Get Text    ${names}[${i}]
+        ${price}=    Get Text    ${prices}[${i}]
+        Click Element    ${add_buttons}[${i}]
+        ${item}=    Create Dictionary    name=${name}    price=${price}
+        Append To List    ${items}    ${item}
+    END
+
+    RETURN    ${items}
+
 
 # Keyword to check the products order A-Z
 Check The Products Order A-Z

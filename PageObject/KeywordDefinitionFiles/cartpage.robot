@@ -23,6 +23,34 @@ Verify Items In Cart
     # Check if the collected items are equal to the expected list
     Lists Should Be Equal    ${list}    ${current_items}
 
+Get Item Names With Prices
+    @{names}=     Get WebElements    ${itemList_locator}
+    @{prices}=    Get WebElements    ${itemPrice_locator}
+
+    ${count}=    Get Length    ${names}
+    ${items}=    Create List
+
+    FOR    ${i}    IN RANGE    0    ${count}
+        ${name}=     Get Text    ${names}[${i}]
+        ${price}=    Get Text    ${prices}[${i}]
+
+        ${item}=    Create Dictionary    name=${name}    price=${price}
+        Append To List    ${items}    ${item}
+
+        Log To Console    Cart → ${name} | ${price}
+    END
+
+    RETURN    ${items}
+    Wait Until Page Contains     @{names}
+
+# Keyword to verify items in the cart
+Verify Items count In Cart
+    [arguments]    ${list}
+    # Collect the list of current items in the cart
+    ${current_items} =    Add Random 4 Items To Cart
+    # Check if the collected items are equal to the expected list
+    Lists Should Be Equal    ${list}    ${current_items}
+
 # Keyword to remove items from the cart
 Remove Items From Cart
     [arguments]    ${list}
