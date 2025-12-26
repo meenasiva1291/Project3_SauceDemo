@@ -1,6 +1,6 @@
 Project3_SauceDemo – Robot Framework Automation
 
-📌 Project Overview
+**Project Overview**
 
 This project is an end-to-end test automation framework built using Robot Framework and SeleniumLibrary to automate the SauceDemo web application.
 
@@ -12,7 +12,7 @@ Easy maintenance
 
 Clear separation of test logic and page actions
 
-🧰 Tech Stack
+**Tech Stack**
 
 Robot Framework
 
@@ -24,35 +24,14 @@ Chrome / ChromeDriver
 
 PyCharm / VS Code
 
-📂 Project Structure
-Project3_SauceDemo
-│
-├── PageObject/
-│   └── KeywordDefinitionFiles/
-│       ├── loginpage.robot
-│       ├── inventorypage.robot
-│       ├── cartpage.robot
-│       └── checkoutpage.robot
-│
-├── Resources/
-│   ├── Keywords/
-│   │   └── generic.robot
-│   └── Locators/
-│       └── test_Locators.py
-│
-├── Tests/
-│   ├── loginpage_test.robot
-│   ├── inventorypage_test.robot
-│   ├── cartpage_test.robot
-│   └── checkoutpage_test.robot
-│
-├── log/
-├── log.html
-├── report.html
-├── output.xml
-└── README.md
+**Project Structure**
 
-🧪 Test Scenarios Covered
+Project3_SauceDemo
+
+<img width="737" height="641" alt="image" src="https://github.com/user-attachments/assets/abeb9037-772d-4adc-a17f-ecf25de8cee5" />
+
+
+**Test Scenarios Covered**
 
 Login validation (valid & invalid)
 
@@ -68,7 +47,7 @@ Checkout flow validation
 
 Total price verification
 
-🔑 Key Features
+**Key Features**
 
 ✔ Page Object Model (POM)
 ✔ Reusable custom keywords
@@ -77,13 +56,13 @@ Total price verification
 ✔ Clean reporting (log.html & report.html)
 ✔ Regression & smoke test tagging
 
-▶️ How to Run the Tests
+▶️ **How to Run the Tests**
+
 1️⃣ Install Dependencies
 pip install robotframework
 pip install robotframework-seleniumlibrary
 
 2️⃣ Verify Chrome & ChromeDriver
-
 Ensure Chrome browser and matching ChromeDriver are installed and available in PATH.
 
 3️⃣ Run All Tests
@@ -97,7 +76,7 @@ robot --include SMOKE Tests/
 robot --include REGRESSION Tests/
 
 
-🔧 Configuration
+**Configuration**
 
 Locators are maintained in:
 Resources/Locators/test_Locators.py
