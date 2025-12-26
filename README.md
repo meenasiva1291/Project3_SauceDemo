@@ -2,7 +2,7 @@ Project3_SauceDemo – Robot Framework Automation
 
 **Table of Contents**
 
-1. Project Overview
+# Project Overview
 
 2. Tech Stack
 
