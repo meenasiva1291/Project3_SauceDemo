@@ -1,36 +1,37 @@
-Project3_SauceDemo – Robot Framework Automation
+# SaucedemoApplication
 
-## Table of Contents
+Website Link: [https://www.saucedemo.com/]
 
-# Project Overview
+## Test Objective
 
-Tech Stack
+The objective of this project is to automate the testing of the web application [https://www.saucedemo.com/] by simulating user actions and validating key UI functionalities. This includes verifying page behavior, accessibility of critical elements, navigation flows, and login functionalities.
+---
 
-Project Structure
+# SauceDemo – Robot Framework Automation
 
-Test Scenarios Covered
-
-Key Features
-
-How to Run the Tests
-
-Test Reports
-
-Configuration
-
-**Project Overview**
+## Project Overview
 
 This project is an end-to-end test automation framework built using Robot Framework and SeleniumLibrary to automate the SauceDemo web application.
 
 The framework follows the Page Object Model (POM) design pattern, ensuring:
 
-High reusability
+- High reusability
 
-Easy maintenance
+- Easy maintenance
 
-Clear separation of test logic and page actions
+- Clear separation of test logic and page actions
 
-**Tech Stack**
+## Table of Contents
+
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Test Scenarios Covered](#test-scenarios-covered)
+- [Key Features](#key-features)
+- [How to Run the Tests](#how-to-run-the-tests)
+- [Test Reports](#test-reports)
+- [Configuration](#configuration)  
+
+## Tech Stack
 
 Robot Framework
 
@@ -42,14 +43,13 @@ Chrome / ChromeDriver
 
 PyCharm / VS Code
 
-**Project Structure**
+## Project Structure
 
 Project3_SauceDemo
 
 <img width="737" height="641" alt="image" src="https://github.com/user-attachments/assets/abeb9037-772d-4adc-a17f-ecf25de8cee5" />
 
-
-**Test Scenarios Covered**
+## Test Scenarios Covered
 
 Login validation (valid & invalid)
 
@@ -65,7 +65,7 @@ Checkout flow validation
 
 Total price verification
 
-**Key Features**
+## Key Features
 
 ✔ Page Object Model (POM)
 
@@ -79,7 +79,7 @@ Total price verification
 
 ✔ Regression & smoke test tagging
 
-▶️ **How to Run the Tests**
+## How to Run the Tests
 
 1️⃣ Install Dependencies
 pip install robotframework
@@ -98,8 +98,7 @@ robot Tests/cartpage_test.robot
 robot --include SMOKE Tests/
 robot --include REGRESSION Tests/
 
-
-**Configuration**
+## Configuration
 
 Locators are maintained in:
 Resources/Locators/test_Locators.py
