@@ -26,50 +26,34 @@ Resource         ../PageObject/KeywordDefinitionFiles/cartpage.robot
 
 *** Test Cases ***
 # TC-06 Test case to validate adding an item to the cart, TC - 07 validate product details inside the cart
-#Validate Add Item To Cart
-#    [Tags]    SMOKE    REGRESSION
-#    # Login to the webpage
-#    Login Into The Webpage
-#    # Add items to the cart
-#    Add Items To Cart    ${cart_list}
-#    # Go to the cart page
-#    Go To Cart
-#    # Verify the items in the cart
-#    Verify Items In Cart    ${cart_list}
+Validate Add Item To Cart
+    [Tags]    SMOKE    REGRESSION
+    # Login to the webpage
+    Login Into The Webpage
+    # Add items to the cart
+    Add Items To Cart    ${cart_list}
+    # Go to the cart page
+    Go To Cart
+    # Verify the items in the cart
+    Verify Items In Cart    ${cart_list}
 
 # TC-06 Test case to validate adding an item to the cart, TC - 07 validate product details inside the cart
-#Validate Add Item Count To Cart
-#    [Tags]    SMOKE    REGRESSION
-#    # Login to the webpage
-#    Login Into The Webpage
-#    # Add items to the cart
-#    Add Random 4 Items To Cart
-#    Element Text Should Be    ${cart_badge}    4
-#    # Go to the cart page
-#    Go To Cart
-#    Get Item Names With Prices
-#    Should Be Equal    first    second
-
 Validate Add Item Count To Cart
     Login Into The Webpage
-
     ${expected_items}=    Add Random 4 Items And Capture Details
     Element Text Should Be    ${cart_badge}    4
-
     Go To Cart
     ${actual_items}=    Get Item Names With Prices
-
     Should Be Equal    ${actual_items}    ${expected_items}
 
-
 # Test case to validate removing an item from the cart
-#Validate Remove Item From Cart
-#    [Tags]    REGRESSION
-#    # Login to the webpage
-#    Login Into The Webpage
-#    # Add items to the cart
-#    Add Items To Cart    ${cart_list}
-#    # Go to the cart page
-#    Go To Cart
-#    # Remove items from the cart
-#    Remove Items From Cart    ${remove_list}
+Validate Remove Item From Cart
+    [Tags]    REGRESSION
+    # Login to the webpage
+    Login Into The Webpage
+    # Add items to the cart
+    Add Items To Cart    ${cart_list}
+    # Go to the cart page
+    Go To Cart
+    # Remove items from the cart
+    Remove Items From Cart    ${remove_list}

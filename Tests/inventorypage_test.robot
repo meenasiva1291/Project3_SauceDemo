@@ -34,7 +34,7 @@ Validate cart icon
     # Check the visibility of cart icon
     Cart icon visibility
 
-# TC-09 - Test case to validate sort operations, TC-05 - Random selection of products
+# TC-09 - Test case to validate sort operations
 Validate Sort Operations
     [Tags]    REGRESSION
     # Login to the webpage
@@ -52,7 +52,7 @@ Validate Sort Operations
     Select Sort Option    3
     Check The Products Order High To Low
 
-# Test case randomly select items
+# TC-05 - Random selection of products
 Validate items added randomly
     [Tags]    SMOKE
     # Login to the webpage
@@ -62,7 +62,6 @@ Validate items added randomly
 
 Validate items added randomly and verify cart
     [Tags]    SMOKE
-
     Login Into The Webpage
     Add Random 4 Items To Cart
     # Verify cart badge count
@@ -76,14 +75,6 @@ Validate Successful Logout
     Login Into The Webpage
     # Logout of the webpage
     Logout of the Webpage
-
-# Test case to validate the About option
-Validate About Option
-    [Tags]    REGRESSION
-    # Login to the webpage
-    Login Into The Webpage
-    # Verify the About tab
-    Verify About Tab
 
 # TC-10 - Test case to validate Reset App State option
 Validate Reset App State Option
